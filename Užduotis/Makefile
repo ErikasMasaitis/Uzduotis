@@ -1,6 +1,6 @@
 CC=gcc
 LD_LIBRARY=$(shell pwd)
-FLAGS=-g -Wall -Werror -pedantic
+FLAGS=-g -D_DEFAULT_SOURCE -Wall -Werror -pedantic
 OBJ=main.c
 
 Programs: libdynamic.so telt
