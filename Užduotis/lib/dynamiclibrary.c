@@ -15,7 +15,11 @@ void push(char *x)
 	temp = (struct Node*)malloc(sizeof(struct Node));
 	
     temp->data = x;
-    temp->next = head;
+	temp->next = NULL;
+	
+	if (head != NULL)
+		temp->next = head;
+	
     head = temp;
 	
 
