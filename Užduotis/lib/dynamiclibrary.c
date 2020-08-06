@@ -13,13 +13,12 @@ void push(char *x)
 	struct Node *temp;
 	
 	temp = (struct Node*)malloc(sizeof(struct Node));
-	if (temp == NULL)
-	{
-		printf("asd");
-	}
+	
+	if(temp != NULL) {
     temp->data = x;
     temp->next = head;
     head = temp;
+	}
 	
 
    /* if(head == NULL) {
@@ -38,10 +37,7 @@ void pushtoend(char *x)
 	struct Node *temp;
 	
 	temp = (struct Node*)malloc(sizeof(struct Node));
-	if (temp == NULL)
-	{
-		printf("asd");
-	}
+	
     temp->data = x;
     temp->next = NULL;
     current = head;
