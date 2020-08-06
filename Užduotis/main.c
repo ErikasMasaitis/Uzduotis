@@ -1,4 +1,4 @@
-// Erikas Masaitis
+﻿// Erikas Masaitis
 #define _XOPEN_SOURCE 500
 #include <stdio.h>
 #include <string.h>
@@ -103,7 +103,6 @@ int SymbolsCount(const char *p)
         perror(p);
     }
 	for (c = getc(fp); c != EOF; c = getc(fp)) {
-        // Increment count for this character 
         count = count + 1; 
 	}
 //	printf("%d\n", count);
@@ -150,10 +149,17 @@ void ListCommands() {
 	printf("-------Linked List information-------\n");
     push("a");
     push("b+580");
+	pushtoend("a++++");
     push("c");
 	push("Threesad5648...");
 	push("++--++");
+	//deleteList();
     printList();
+	push("ce");
+	pushtoend("žinau");
+	push("blogai");
+	deleteList();
+	printList();
 	printf("Length of list: %d\n", length());
 }
 /** Recursively go through all folders/files
