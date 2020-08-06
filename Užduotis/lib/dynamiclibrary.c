@@ -6,7 +6,7 @@
 struct Node *head = NULL;
 struct Node *current = NULL;
 
-/** Adds element to list
+/** Adds element to list front
  */
 void push(char *x)
 {
@@ -14,11 +14,9 @@ void push(char *x)
 	
 	temp = (struct Node*)malloc(sizeof(struct Node));
 	
-	if(temp != NULL) {
     temp->data = x;
     temp->next = head;
     head = temp;
-	}
 	
 
    /* if(head == NULL) {
@@ -31,7 +29,8 @@ void push(char *x)
         current->next = temp;
     }*/
 }
-
+/** adds nodes to end
+*/
 void pushtoend(char *x)
 {
 	struct Node *temp;
