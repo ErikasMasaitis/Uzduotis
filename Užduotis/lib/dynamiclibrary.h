@@ -13,6 +13,8 @@ struct Node *head;
 struct Node *current;
 
 extern void push(char *x);
+extern void pushtoend(char *x);
+extern void deleteList();
 extern void printList();
 extern int length();
 

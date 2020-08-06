@@ -13,7 +13,35 @@ void push(char *x)
 	struct Node *temp;
 	
 	temp = (struct Node*)malloc(sizeof(struct Node));
+	if (temp == NULL)
+	{
+		printf("asd");
+	}
+    temp->data = x;
+    temp->next = head;
+    head = temp;
 	
+
+   /* if(head == NULL) {
+        head = temp;
+    }
+	else {
+        while(current->next != NULL) {
+            current = current->next;
+        }
+        current->next = temp;
+    }*/
+}
+
+void pushtoend(char *x)
+{
+	struct Node *temp;
+	
+	temp = (struct Node*)malloc(sizeof(struct Node));
+	if (temp == NULL)
+	{
+		printf("asd");
+	}
     temp->data = x;
     temp->next = NULL;
     current = head;
@@ -28,6 +56,17 @@ void push(char *x)
         }
         current->next = temp;
     }
+}
+
+void deleteList()
+{
+	struct Node *temp;
+	
+	while(head != NULL){
+	temp = head;
+	head=head->next;
+	free(temp);
+	}
 }
 
 /** Prints list values
